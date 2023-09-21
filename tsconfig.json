@@ -52,6 +52,7 @@
       "*": ["src/utils/types/*.ts", "src/core/navigation/types/*.ts"],
       "~/components": ["src/components"],
       "~/core/*": ["src/core/*"],
+      "~/infra": ["src/infra"],
       "~/libs": ["src/libs"],
       "~/pages": ["src/pages"],
       "~/utils": ["src/utils"],

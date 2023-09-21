@@ -15,4 +15,5 @@ declare type Locales = {
   lastNamePlaceholder: string;
   alreadyHaveAccount: string;
   createAccount: string;
+  unexpectedError: string;
 };

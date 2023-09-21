@@ -15,4 +15,5 @@ export default {
   lastNamePlaceholder: 'Type your last name',
   alreadyHaveAccount: 'Already have an account?',
   createAccount: 'Create account',
+  unexpectedError: 'Unexpected error. Check your internet and try again',
 } as Locales;

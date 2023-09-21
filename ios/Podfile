@@ -31,6 +31,12 @@ target 'DummyjsonAuth' do
   # Flags change depending on the env values.
   flags = get_default_flags()
 
+  # React Native Config Dependencies
+  # => setted for extensions with react dependencies
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
+  # => setted for extensions without react dependencies
+  pod 'react-native-config/Extension', :path => '../node_modules/react-native-config'
+
   use_react_native!(
     :path => config[:reactNativePath],
     # Hermes is now enabled by default. Disable by setting this flag to false.
