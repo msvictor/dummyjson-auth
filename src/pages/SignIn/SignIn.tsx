@@ -1,4 +1,5 @@
 import React from 'react';
+import { translate } from '~/utils';
 import { Title, Wrapper } from './styles';
 
 type Props = {
@@ -7,7 +8,7 @@ type Props = {
 
 const SignIn: React.FC<Props> = () => (
   <Wrapper>
-    <Title>SignIn</Title>
+    <Title>{translate('signIn')}</Title>
   </Wrapper>
 );
 
