@@ -6,6 +6,7 @@ export enum ROUTES_STACKS {
 export enum ROUTES {
   // PUBLIC ROUTES
   SIGN_IN = 'SIGN_IN',
+  SIGN_UP = 'SIGN_UP',
   // PRIVATE ROUTES
   PROFILE = 'PROFILE',
 }

@@ -5,7 +5,7 @@ import SignIn from './SignIn';
 const SignInContainer: React.FC = () => {
   const { navigation, routes } = useNavigation();
 
-  const goToSignUp = (): void => navigation.navigate(routes.PROFILE);
+  const goToSignUp = (): void => navigation.navigate(routes.SIGN_UP);
 
   return <SignIn goToSignUp={goToSignUp} />;
 };

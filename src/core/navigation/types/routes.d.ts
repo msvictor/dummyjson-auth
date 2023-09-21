@@ -10,4 +10,5 @@ declare type PrivateStackParams = {
 
 declare type PublicStackParams = {
   [ROUTES.SIGN_IN]: undefined;
+  [ROUTES.SIGN_UP]: undefined;
 };
