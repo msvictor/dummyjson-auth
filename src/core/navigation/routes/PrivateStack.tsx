@@ -12,7 +12,7 @@ const PrivateStack = (): JSX.Element => (
       header: () => <></>,
     }}
   >
-    <Private.Screen name={ROUTES.PROFILE} component={Pages.Profile} />s{' '}
+    <Private.Screen name={ROUTES.PROFILE} component={Pages.Profile} />
   </Private.Navigator>
 );
 

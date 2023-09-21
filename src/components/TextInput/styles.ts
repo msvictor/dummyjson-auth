@@ -2,6 +2,7 @@ import { getTheme } from '~/core/theme';
 import { styled } from '~/libs';
 import IconBase from '../Icon';
 
+const text300 = getTheme('colors.text.300');
 const text500 = getTheme('colors.text.500');
 const background900 = getTheme('colors.background.900');
 const borderRadiusXs = getTheme('borderRadius.xs');
@@ -30,10 +31,13 @@ export const InputWrapper = styled.View`
   border-radius: ${borderRadiusXs}px;
 `;
 
-export const Input = styled.TextInput`
+export const Input = styled.TextInput.attrs((props) => ({
+  placeholderTextColor: text300(props),
+}))`
   flex: 1;
   padding: 0;
   margin: 0;
+  color: ${text500};
 `;
 
 export const Icon = styled(IconBase).attrs((props) => ({
