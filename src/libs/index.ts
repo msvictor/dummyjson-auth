@@ -1,7 +1,7 @@
 import * as FormValidator from 'yup';
 
 export { FormValidator };
-export { useTheme } from 'styled-components';
+export { useTheme, css } from 'styled-components';
 export {
   default as styled,
   ThemeContext,

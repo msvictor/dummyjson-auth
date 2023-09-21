@@ -4,10 +4,11 @@ import {
   TextInput as TextInputBase,
 } from '~/components';
 import { getTheme } from '~/core/theme';
-import { styled } from '~/libs';
+import { css, styled } from '~/libs';
 
 type Props = {
   underline?: boolean;
+  red?: boolean;
 };
 
 const text500 = getTheme('colors.text.500');
@@ -20,6 +21,7 @@ const fontSizesXl = getTheme('fontSizes.xl');
 const fontSizesXxl = getTheme('fontSizes.xxl');
 const spacingMd = getTheme('spacing.md');
 const spacingXxl = getTheme('spacing.xxl');
+const danger300 = getTheme('colors.danger.300');
 
 export const Wrapper = styled(PageWrapper)``;
 
@@ -56,4 +58,9 @@ export const BottomText = styled.Text<Props>`
   line-height: ${fontSizesMd}px;
   margin-left: 4px;
   text-decoration: ${(props) => (props.underline ? 'underline' : 'none')};
+  ${(props) =>
+    props.red &&
+    css`
+      color: ${danger300};
+    `};
 `;
