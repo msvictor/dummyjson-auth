@@ -19,7 +19,7 @@ const MainStack = createNativeStackNavigator();
 
 const NavigationProvider: React.FC<Props> = ({ setNavigator }) => {
   const routeNameRef = useRef<any>();
-  const { colors } = useContext<any>(ThemeContext);
+  const { colors } = useContext(ThemeContext);
 
   const themeContext = {
     dark: false,

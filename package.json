@@ -3,20 +3,22 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "android": "yarn setup:android && npx react-native run-android",
     "commit": "git-cz",
-    "postinstall": "npx jetify && patch-package && npx husky install",
+    "clean:watchman": "watchman watch-del-all",
     "clean:android": "cd android && ./gradlew clean && cd ..",
-    "android": "npx solidarity && yarn clean:android && adb reverse tcp:9090 tcp:9090 && npx react-native run-android",
-    "ios": "npx solidarity && npx pod-install && npx react-native run-ios",
-    "lint": "eslint .",
-    "start": "react-native start",
-    "test": "jest",
+    "generate:component": "npx hygen generator component",
+    "generate:page": "npx hygen generator page",
+    "ios": "yarn setup:ios && npx react-native run-ios",
     "lint:check": "tsc && eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "tsc && eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
     "prettify:check": "prettier --config ./.prettierrc.js --check \"src/**/*.{js,jsx,ts,tsx,json}\"",
     "prettify:write": "prettier --config ./.prettierrc.js --write \"src/**/*.{js,jsx,ts,tsx,json}\"",
-    "generate:component": "npx hygen generator component",
-    "generate:page": "npx hygen generator page"
+    "postinstall": "npx jetify && patch-package && npx husky install",
+    "start": "npx react-native start --reset-cache",
+    "setup:ios": "npx solidarity && npx pod-install && yarn clean:watchman",
+    "setup:android": "npx solidarity && yarn clean:android && yarn clean:watchman && adb reverse tcp:9090 tcp:9090",
+    "test": "jest"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.19.3",
@@ -34,7 +36,7 @@
     "react-native-svg": "^13.14.0",
     "react-redux": "^8.1.2",
     "redux-persist": "^6.0.0",
-    "styled-components": "^6.0.8"
+    "styled-components": "^5.3.11"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -92,5 +94,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }

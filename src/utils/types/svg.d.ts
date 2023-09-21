@@ -6,4 +6,5 @@ declare type Svg = {
 
 declare type SvgSet = {
   eye: Svg;
+  eyeSlash: Svg;
 };
