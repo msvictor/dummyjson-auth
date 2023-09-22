@@ -6,7 +6,9 @@ import {
   ParamListBase,
   ThemeContext,
   createNativeStackNavigator,
+  useSelector,
 } from '~/libs';
+import { authSelector } from '../stores/auth/selectors';
 import { ROUTES_STACKS } from './enums';
 import { PrivateStack, PublicStack } from './routes';
 import { getActiveRouteName } from './services';
@@ -20,6 +22,9 @@ const MainStack = createNativeStackNavigator();
 const NavigationProvider: React.FC<Props> = ({ setNavigator }) => {
   const routeNameRef = useRef<any>();
   const { colors } = useContext(ThemeContext);
+  const { token } = useSelector(authSelector);
+
+  const initialRoute = token ? ROUTES_STACKS.PRIVATE : ROUTES_STACKS.PUBLIC;
 
   const themeContext = {
     dark: false,
@@ -39,12 +44,6 @@ const NavigationProvider: React.FC<Props> = ({ setNavigator }) => {
       routeNameRef.current = currentRouteName;
     }
   };
-
-  const getInitialRoute = (): string => {
-    return ROUTES_STACKS.PUBLIC;
-  };
-
-  const initialRoute = getInitialRoute();
 
   return (
     <NavigationContainer

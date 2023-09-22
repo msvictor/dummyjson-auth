@@ -5,4 +5,4 @@ const selector = (
   state: ApplicationState<ThemeType>,
 ): ApplicationState<ThemeType> => state;
 
-export const userSelector = createSelector(selector, (state) => state.user);
+export const authSelector = createSelector(selector, (state) => state.auth);

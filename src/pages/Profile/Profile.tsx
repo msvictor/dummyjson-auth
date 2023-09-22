@@ -3,12 +3,15 @@ import { translate } from '~/utils';
 import { Title, Wrapper } from './styles';
 
 type Props = {
-  todo?: unknown;
+  userId?: number;
 };
 
-const Profile: React.FC<Props> = () => (
+const Profile: React.FC<Props> = ({ userId }) => (
   <Wrapper>
-    <Title>{translate('profile')}</Title>
+    <Title>
+      {translate('profile')}
+      {userId}
+    </Title>
   </Wrapper>
 );
 

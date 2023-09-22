@@ -5,6 +5,7 @@ type Props = {
   type?: ButtonType;
 };
 
+const spacingSm = getTheme('spacing.sm');
 const sizingMd = getTheme('sizing.md');
 const background100 = getTheme('colors.background.100');
 const primary500 = getTheme('colors.primary.500');
@@ -39,6 +40,7 @@ const border = {
 
 export const Wrapper = styled.TouchableOpacity<Props>`
   padding: ${sizingMd}px;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: ${(props) => background[props.type!]};
@@ -48,8 +50,16 @@ export const Wrapper = styled.TouchableOpacity<Props>`
 `;
 
 export const Text = styled.Text<Props>`
+  flex: 1;
+  text-align: center;
   color: ${(props) => text[props.type!]};
   font-weight: ${fontWeightsMedium};
   font-size: ${fontSizesMd}px;
   line-height: ${fontSizesXl}px;
+`;
+
+export const Loader = styled.ActivityIndicator<Props>`
+  color: ${(props) => text[props.type!]};
+  height: ${sizingMd}px;
+  margin-left: ${spacingSm}px;
 `;

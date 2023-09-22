@@ -1,15 +1,19 @@
 import React from 'react';
 import { TouchableOpacityProps } from 'react-native';
-import { Text, Wrapper } from './styles';
+import { Loader, Text, Wrapper } from './styles';
 
 type Props = TouchableOpacityProps & {
   type: ButtonType;
   label: string;
+  loading?: boolean;
 };
 
-const Button: React.FC<Props> = ({ type, label, ...rest }) => (
+const Button: React.FC<Props> = ({ type, label, loading, ...rest }) => (
   <Wrapper type={type} {...rest}>
-    <Text type={type}>{label}</Text>
+    <Text type={type}>
+      {label}
+      {loading && <Loader />}
+    </Text>
   </Wrapper>
 );
 

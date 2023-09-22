@@ -1,7 +1,7 @@
 export default {
   login: 'Login',
-  email: 'E-mail',
-  emailPlaceholder: 'Type your e-mail',
+  username: 'Username',
+  usernamePlaceholder: 'Type your username',
   password: 'Password',
   passwordPlaceholder: 'Minimum 8 characters',
   dontHaveAccount: 'Don`t have an account?',

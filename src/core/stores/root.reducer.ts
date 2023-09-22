@@ -1,9 +1,10 @@
 import { AnyAction, Reducer, combineReducers } from '~/libs';
 
+import auth from './auth/slices';
 import theme from './theme/slices';
 import user from './user/slices';
 
-const combinedReducers = combineReducers({ user, theme });
+const combinedReducers = combineReducers({ auth, user, theme });
 
 type RootState = ReturnType<typeof combinedReducers>;
 

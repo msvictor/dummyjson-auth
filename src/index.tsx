@@ -5,6 +5,8 @@ import { AppStore, Persistor } from './core/stores';
 import { ThemeProvider } from './core/theme';
 import { PersistGate, Provider, SafeAreaProvider } from './libs';
 
+import './core/config';
+
 const App: React.FC = () => {
   const { navigation } = useNavigation();
 

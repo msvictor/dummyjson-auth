@@ -6,4 +6,8 @@ declare global {
     export type { RouteProp };
     export { ROUTES };
   }
+
+  interface Console {
+    tron: any;
+  }
 }

@@ -13,7 +13,6 @@ const PublicStack = (): JSX.Element => (
     }}
   >
     <Public.Screen name={ROUTES.SIGN_IN} component={Pages.SignIn} />
-    <Public.Screen name={ROUTES.SIGN_UP} component={Pages.SignUp} />
   </Public.Navigator>
 );
 

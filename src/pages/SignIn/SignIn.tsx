@@ -4,7 +4,6 @@ import { translate } from '~/utils';
 import { FormValues } from './form';
 import {
   BottomText,
-  BottomTextWrapper,
   Button,
   TextInput,
   TextInputWrapper,
@@ -13,10 +12,10 @@ import {
 } from './styles';
 
 type Props = {
-  goToSignUp: () => void;
+  loading: boolean;
 };
 
-const SignIn: React.FC<Props> = ({ goToSignUp }) => {
+const SignIn: React.FC<Props> = ({ loading }) => {
   const { values, submitForm, handleChange, errors }: FormikProps<FormValues> =
     useFormikContext();
 
@@ -26,12 +25,12 @@ const SignIn: React.FC<Props> = ({ goToSignUp }) => {
 
       <TextInputWrapper>
         <TextInput
-          label={translate('email')}
-          placeholder={translate('emailPlaceholder')}
-          value={values.email}
-          onChangeText={handleChange('email')}
+          label={translate('username')}
+          placeholder={translate('usernamePlaceholder')}
+          value={values.user}
+          onChangeText={handleChange('user')}
         />
-        {!!errors.email && <BottomText red>{errors.email}</BottomText>}
+        {!!errors.user && <BottomText red>{errors.user}</BottomText>}
       </TextInputWrapper>
 
       <TextInputWrapper>
@@ -39,21 +38,19 @@ const SignIn: React.FC<Props> = ({ goToSignUp }) => {
           label={translate('password')}
           placeholder={translate('passwordPlaceholder')}
           secureTextEntry
-          value={values.password}
-          onChangeText={handleChange('password')}
+          value={values.pass}
+          onChangeText={handleChange('pass')}
         />
-        {!!errors.password && <BottomText red>{errors.password}</BottomText>}
+        {!!errors.pass && <BottomText red>{errors.pass}</BottomText>}
       </TextInputWrapper>
 
-      <Button type="primary" label={translate('login')} onPress={submitForm} />
-
-      <BottomTextWrapper>
-        <BottomText>{translate('dontHaveAccount')}</BottomText>
-        <BottomText underline onPress={goToSignUp}>
-          {translate('signUp')}
-        </BottomText>
-        <BottomText>{translate('here')}</BottomText>
-      </BottomTextWrapper>
+      <Button
+        type="primary"
+        loading={loading}
+        disabled={loading}
+        onPress={submitForm}
+        label={translate('login')}
+      />
     </Wrapper>
   );
 };

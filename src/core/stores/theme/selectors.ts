@@ -1,7 +1,7 @@
 import { ThemeType } from '~/core/theme';
 import { createSelector } from '~/libs';
 
-export const selector = (
+const selector = (
   state: ApplicationState<ThemeType>,
 ): ApplicationState<ThemeType> => state;
 

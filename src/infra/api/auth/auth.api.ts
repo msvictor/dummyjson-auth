@@ -1,7 +1,7 @@
 import { ResponseError } from '~/infra';
 import { request } from '../providers';
 
-export const login = async ({
+export const signIn = async ({
   username,
   password,
 }: AuthCredentials): Promise<AuthResponse> => {

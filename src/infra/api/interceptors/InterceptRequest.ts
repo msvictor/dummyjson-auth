@@ -4,7 +4,12 @@ class InterceptRequest {
   public async execute(
     config: AxiosRequestConfig,
   ): Promise<AxiosRequestConfig | any> {
-    return config;
+    return {
+      ...config,
+      headers: {
+        ...config.headers,
+      },
+    };
   }
 }
 

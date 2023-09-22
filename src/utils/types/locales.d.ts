@@ -1,7 +1,7 @@
 declare type Locales = {
   login: string;
-  email: string;
-  emailPlaceholder: string;
+  username: string;
+  usernamePlaceholder: string;
   password: string;
   passwordPlaceholder: string;
   dontHaveAccount: string;

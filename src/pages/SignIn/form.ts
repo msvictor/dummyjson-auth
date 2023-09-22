@@ -1,16 +1,16 @@
 import { FormValidator } from '~/libs';
 
 export type FormValues = {
-  email: string;
-  password: string;
+  user: string;
+  pass: string;
 };
 
 export const initialValues = {
-  email: '',
-  password: '',
+  user: '',
+  pass: '',
 };
 
 export const validationSchema = FormValidator.object({
-  email: FormValidator.string().email().required(),
-  password: FormValidator.string().min(8).required(),
+  user: FormValidator.string().required(),
+  pass: FormValidator.string().min(6).required(),
 });

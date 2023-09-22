@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacityProps } from 'react-native';
-import { themeSelector } from '~/core/stores/theme/selectors';
+import { themeSelector } from '~/core/stores';
 import { SvgXml, useSelector } from '~/libs';
 import { Wrapper } from './styles';
 

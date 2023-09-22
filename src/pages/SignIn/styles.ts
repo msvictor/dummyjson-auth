@@ -43,12 +43,6 @@ export const Button = styled(ButtonBase)`
   margin-top: ${spacingXxl}px;
 `;
 
-export const BottomTextWrapper = styled.View`
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-`;
-
 export const BottomText = styled.Text<Props>`
   text-align: center;
   color: ${text500};
