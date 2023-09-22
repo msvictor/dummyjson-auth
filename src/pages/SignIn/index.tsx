@@ -31,7 +31,6 @@ const SignInContainer: React.FC = () => {
       if (data) {
         navigation.replace(stacks.PRIVATE, {
           screen: routes.PROFILE,
-          params: { userId: data.id },
         });
       }
     },

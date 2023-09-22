@@ -2,7 +2,7 @@ import { AuthApi } from '~/infra';
 import { createAsyncThunk } from '~/libs';
 import { PERSIST_KEYS } from '~/utils';
 
-import { setPartialUserState } from '../user/slices';
+import { setPartialUserData } from '../user/slices';
 import { setAuthToken } from './slices';
 
 export const signIn = createAsyncThunk(
@@ -12,7 +12,8 @@ export const signIn = createAsyncThunk(
 
     dispatch(setAuthToken(response.token));
     dispatch(
-      setPartialUserState({
+      setPartialUserData({
+        id: response.id,
         username: response.username,
         email: response.email,
         firstName: response.firstName,

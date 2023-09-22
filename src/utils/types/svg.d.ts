@@ -8,4 +8,5 @@ declare type SvgSet = {
   eye: Svg;
   eyeSlash: Svg;
   arrowLeft: Svg;
+  user: Svg;
 };

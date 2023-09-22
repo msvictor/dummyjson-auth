@@ -1,4 +1,4 @@
-declare type UserState = {
+declare type UserData = {
   id?: number;
   username: string;
   email: string;

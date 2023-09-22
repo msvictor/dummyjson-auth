@@ -58,3 +58,4 @@ export {
 } from 'axios';
 export { default as ENV } from 'react-native-config';
 export { default as Reactotron } from 'reactotron-react-native';
+export { default as FastImage } from 'react-native-fast-image';

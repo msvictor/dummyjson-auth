@@ -7,6 +7,7 @@ const sizingMd = getTheme('sizing.md');
 const sizingLg = getTheme('sizing.lg');
 const spacingXxs = getTheme('spacing.xxs');
 const spacingXs = getTheme('spacing.xs');
+const primary500 = getTheme('colors.primary.500');
 const text700 = getTheme('colors.text.700');
 const text900 = getTheme('colors.text.900');
 const background900 = getTheme('colors.background.900');
@@ -31,7 +32,7 @@ export const IconWrapper = styled.View`
 `;
 
 export const Icon = styled(IconBase).attrs((props) => ({
-  color: text900(props),
+  color: primary500(props),
 }))``;
 
 export const ContentWrapper = styled.View`
@@ -65,5 +66,5 @@ export const SuppressBadge = styled.View`
   height: ${spacingXs}px;
   margin: ${sizingSm}px ${spacingXxs}px;
   border-radius: ${borderRadiusCircle}px;
-  background-color: ${background900};
+  background-color: ${primary500};
 `;

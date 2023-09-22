@@ -1,11 +1,7 @@
 const { ROUTES } = Modules;
 
 declare type PrivateStackParams = {
-  [ROUTES.PROFILE]: {
-    params: {
-      userId?: number;
-    };
-  };
+  [ROUTES.PROFILE]: undefined;
 };
 
 declare type PublicStackParams = {

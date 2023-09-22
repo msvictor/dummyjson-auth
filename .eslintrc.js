@@ -73,6 +73,7 @@ module.exports = {
         caughtErrorsIgnorePattern: '^_',
       },
     ],
+    '@typescript-eslint/ban-ts-comment': 0,
     '@typescript-eslint/member-delimiter-style': 0,
     '@typescript-eslint/no-empty-function': 0,
     '@typescript-eslint/no-explicit-any': 0,

@@ -12,6 +12,7 @@ type Props = {
   showBackButton?: boolean;
   suppressTitle?: boolean;
   customHeaderComponent?: React.ReactNode;
+  onGoBack?(): void;
 };
 
 const PageWrapper: React.FC<Props> = ({
@@ -22,6 +23,7 @@ const PageWrapper: React.FC<Props> = ({
   showBackButton = false,
   suppressTitle = false,
   customHeaderComponent,
+  onGoBack,
 }) => (
   <Wrapper edges={[EDGES.TOP]}>
     <ScrollView>
@@ -31,6 +33,7 @@ const PageWrapper: React.FC<Props> = ({
           subtitle={subtitle}
           showBackButton={showBackButton}
           suppressTitle={suppressTitle}
+          onGoBack={onGoBack}
         />
       )}
       <ContentWrapper fullWidth={fullWidth}>{children}</ContentWrapper>

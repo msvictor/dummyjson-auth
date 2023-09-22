@@ -16,6 +16,7 @@ type Props = {
   subtitle: string;
   showBackButton: boolean;
   suppressTitle: boolean;
+  onGoBack?(): void;
 };
 
 const PageHeader: React.FC<Props> = ({
@@ -23,6 +24,7 @@ const PageHeader: React.FC<Props> = ({
   subtitle,
   showBackButton,
   suppressTitle,
+  onGoBack,
 }) => {
   const { navigation } = useNavigation();
 
@@ -30,7 +32,7 @@ const PageHeader: React.FC<Props> = ({
     <Wrapper>
       <IconWrapper>
         {showBackButton && (
-          <Icon name="arrowLeft" onPress={navigation.goBack} />
+          <Icon name="arrowLeft" onPress={onGoBack ?? navigation.goBack} />
         )}
       </IconWrapper>
 

@@ -4,3 +4,5 @@ export { default as PageWrapper } from './PageWrapper';
 export { default as TextInput } from './TextInput';
 export { default as KeyboardAvoidingView } from './KeyboardAvoidingView';
 export { default as FormContainer } from './FormContainer';
+export { default as Card } from './Card';
+export { default as InfoSet } from './InfoSet';
