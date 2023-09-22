@@ -39,26 +39,115 @@
 
 - [Dummyjson Auth](#dummyjson-auth)
 - [:interrobang: About](#interrobang-about)
-- [:sparkles: The Application](#sparkles-the-application)
+- [:octocat:Getting Started](#octocatgetting-started)
+  - [Prerequisites](#prerequisites)
+    - [For Android](#for-android)
+    - [For iOS](#for-ios)
+  - [Running the application](#running-the-application)
+- [:scroll: Project Scripts](#scroll-project-scripts)
 - [:diamonds: Techs](#diamonds-techs)
-- [:octocat:Clone this repo](#octocatclone-this-repo)
-
-<a id="about"></a>
+- [:sparkles: The Application](#sparkles-the-application)
+- [:memo: License](#memo-license)
 
 ## :interrobang: About
 
-<strong>Dummyjson Auth:</strong> um aplicativo para se executar login e ver as informações do usuario
+<strong>Dummyjson Auth:</strong> a cutting-edge mobile application developed with React Native designed to streamline the user login process and provide a seamless and personalized experience for users. This innovative app prioritizes user convenience and data security, making it the go-to choice for accessing and managing personal information effortlessly.
 
-<a id="application"></a>
+## :octocat:Getting Started
 
-## :sparkles: The Application
+These instructions will allow you to get a copy of the project up and running on your local machine for development and testing purposes.
 
-<h3 align="center">
-    <img alt="splash" src=".github/assets/screenshot_login.png" width="25%">
-    <img alt="dash" src=".github/assets/screenshot_profile.png" width="25%">
-</h3>
+### Prerequisites
 
-<a id="techs"></a>
+First of all you will need to have installed on your machine some tools to proceed.
+
+- Node.js **v16.0 or above**, to install node check out: [node docs](https://nodejs.org/pt-br/docs)
+- Watchman, to install watchman check out: [watchman docs](https://facebook.github.io/watchman/docs/install)
+- Yarn, to install yarn check out: [yarn docs](https://yarnpkg.com/getting-started/install)
+
+#### For Android
+
+- You will must have a ANDROID_HOME environment variable setted, so check out [developer android docs](https://developer.android.com/studio/command-line/variables?hl=pt-br)
+
+#### For iOS
+
+- You will must have a CocoaPods **v1.11 or above** installed, so check out [cocoapods](https://cocoapods.org/)
+- You will must have a Ruby **v2.7.5** installed, so check out [rvm](https://rvm.io/)
+- You will must have a Xcode and xcode comand line tools installed, so check out [apple developer](https://developer.apple.com/xcode/resources/)
+
+### Running the application
+
+1. On command line terminal clone this repo:
+
+```sh
+  git clone https://github.com/msvictor/dummyjson-auth.git
+```
+
+2. Go to folder:
+
+```sh
+  cd dummyjson-auth
+```
+
+3. Add the dependencies
+
+- with yarn
+
+```sh
+  yarn
+```
+
+- or with npm
+
+```sh
+  npm install
+```
+
+4. Run the app
+
+- with yarn
+
+```sh
+  # on android device
+  yarn android
+```
+
+```sh
+  # on ios device
+  yarn ios
+```
+
+- or with npm
+
+```sh
+  # on android device
+  npm run android
+```
+
+```sh
+  # on ios device
+  npm run ios
+```
+
+## :scroll: Project Scripts
+
+- `yarn android` execute app on android device
+- `yarn commit` execute commit strategy
+- `yarn clean:watchman` clean watchman environment
+- `yarn clean:android` clean android environment
+- `yarn generate:component` generate a new component
+- `yarn generate:page` generate a new page
+- `yarn generate:store` generate a new store
+- `yarn ios` execute app on ios device
+- `yarn lint:check` execute the linter and check for problems.
+- `yarn lint:fix` execute the linter and automatically fix issues identified
+- `yarn prettify:check` check file formatting with prettier.
+- `yarn prettify:write` format files with prettier.
+- `yarn postinstall` execute task to prevent issues on installed packages
+- `yarn start` starts react native metro bundler
+- `yarn setup:ios` prepare ios environment to execute the app
+- `yarn setup:android` prepare android environment to execute the app
+- `yarn test` used to run tests if have any
 
 ## :diamonds: Techs
 
@@ -77,34 +166,13 @@ The project was developed with the technologies below:
 - [Redux Toolkit](https://redux-toolkit.js.org/introduction/getting-started)
 - [Styled Components](https://styled-components.com/)
 
-<a id="clone"></a>
+## :sparkles: The Application
 
-## :octocat:Clone this repo
+<h3 align="center">
+    <img alt="splash" src=".github/assets/screenshot_login.png" width="25%">
+    <img alt="dash" src=".github/assets/screenshot_profile.png" width="25%">
+</h3>
 
-1. On command line terminal:
+## :memo: License
 
-```sh
-  git clone https://github.com/msvictor/dummyjson-auth.git
-```
-
-1. Go to folder:
-
-```sh
-  cd dummyjson-auth
-```
-
-3. Add the dependencies
-
-```sh
-  yarn
-```
-
-4. Run the app
-
-```sh
-  # on android device
-  yarn android
-
-  # on ios device
-  yarn ios
-```
+This project is under MIT LICENSE. for more details follow the link: [LICENSE](LICENSE).
