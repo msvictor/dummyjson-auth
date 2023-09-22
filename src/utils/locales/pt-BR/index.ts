@@ -16,4 +16,5 @@ export default {
   alreadyHaveAccount: 'Already have an account?',
   createAccount: 'Create account',
   unexpectedError: 'Unexpected error. Check your internet and try again',
+  error: 'Error',
 } as Locales;

@@ -1,8 +1,10 @@
 import React, { useCallback } from 'react';
+import { Alert } from 'react-native';
 import { FormContainer } from '~/components';
 import { useNavigation } from '~/core/navigation';
 import { authSelector, signIn, useAppDispatch } from '~/core/stores';
-import { useSelector } from '~/libs';
+import { isRejected, useSelector } from '~/libs';
+import { translate } from '~/utils';
 import { FormValues, initialValues, validationSchema } from './form';
 import SignIn from './SignIn';
 
@@ -19,6 +21,11 @@ const SignInContainer: React.FC = () => {
           password: values.pass,
         }),
       );
+
+      if (isRejected(response)) {
+        Alert.alert(translate('error'), response?.error.message);
+        return;
+      }
 
       const data = response.payload as AuthResponse;
       if (data) {

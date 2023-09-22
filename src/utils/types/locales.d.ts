@@ -16,4 +16,5 @@ declare type Locales = {
   alreadyHaveAccount: string;
   createAccount: string;
   unexpectedError: string;
+  error: string;
 };
