@@ -1,79 +1,110 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+<h1 align="center">
+    Dummyjson Auth
+</h1>
 
-# Getting Started
+<p align="center">
+   <a href="https://github.com/msvictor">
+    <img alt="Code by Victor Gabriel" src="https://img.shields.io/badge/code%20by-Victor Gabriel-%23E02041">
+  </a>
+</p>
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+<p align="center">
+  <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript">
+    <img alt="Javacript" src="https://img.shields.io/badge/Javacript-%23D1CB36">
+  </a>
+  <a href="https://www.typescriptlang.org/">
+    <img alt="Typescript" src="https://img.shields.io/badge/Typescript-%23007acc">
+  </a>
+  <a href="https://reactnative.dev/">
+    <img alt="ReactNative" src="https://img.shields.io/badge/React Native-%235465D1">
+  </a>
+  <a href="https://jestjs.io/pt-BR/">
+    <img alt="Jest" src="https://img.shields.io/badge/Jest-%2315C213">
+  </a>
+  <a href="https://styled-components.com/">
+    <img alt="Styled-Components" src="https://img.shields.io/badge/Styled Components-%23C871AD">
+  </a>
+  <a href="https://eslint.org/">
+    <img alt="eslint" src="https://img.shields.io/badge/ESLint-%234B32C3">
+  </a>
+    <a href="https://prettier.io/">
+    <img alt="prettier" src="https://img.shields.io/badge/Prettier-%231A2B34">
+  </a>
+    <a href="https://redux.js.org/">
+    <img alt="husky" src="https://img.shields.io/badge/Redux-%23181820">
+  </a>
+</p>
 
-## Step 1: Start the Metro Server
+## Dummyjson Auth
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+- [Dummyjson Auth](#dummyjson-auth)
+- [:interrobang: About](#interrobang-about)
+- [:sparkles: The Application](#sparkles-the-application)
+- [:diamonds: Techs](#diamonds-techs)
+- [:octocat:Clone this repo](#octocatclone-this-repo)
 
-To start Metro, run the following command from the _root_ of your React Native project:
+<a id="about"></a>
 
-```bash
-# using npm
-npm start
+## :interrobang: About
 
-# OR using Yarn
-yarn start
+<strong>Dummyjson Auth:</strong> um aplicativo para se executar login e ver as informações do usuario
+
+<a id="application"></a>
+
+## :sparkles: The Application
+
+<h3 align="center">
+    <img alt="splash" src=".github/assets/screenshot_login.png" width="25%">
+    <img alt="dash" src=".github/assets/screenshot_profile.png" width="25%">
+</h3>
+
+<a id="techs"></a>
+
+## :diamonds: Techs
+
+The project was developed with the technologies below:
+
+- [Javacript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [Typescript](https://www.typescriptlang.org/)
+- [React Native](https://expo.io/)
+- [Async Storage](https://react-native-async-storage.github.io/async-storage/docs/install/)
+- [Axios](https://axios-http.com/docs/intro)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [React Navigation](https://reactnavigation.org/)
+- [React Native Config](https://github.com/luggit/react-native-config)
+- [React Redux](https://redux.js.org/introduction/getting-started)
+- [Redux Toolkit](https://redux-toolkit.js.org/introduction/getting-started)
+- [Styled Components](https://styled-components.com/)
+
+<a id="clone"></a>
+
+## :octocat:Clone this repo
+
+1. On command line terminal:
+
+```sh
+  git clone https://github.com/msvictor/dummyjson-auth.git
 ```
 
-## Step 2: Start your Application
+1. Go to folder:
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```sh
+  cd dummyjson-auth
 ```
 
-### For iOS
+3. Add the dependencies
 
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+```sh
+  yarn
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+4. Run the app
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+```sh
+  # on android device
+  yarn android
 
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+  # on ios device
+  yarn ios
+```
